@@ -53,11 +53,13 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
 }
 
 .toggle img{
     width:32px;
     height:32px;
+    object-fit:contain;
 }
 
 .top-section{
@@ -126,9 +128,14 @@ body{
     font-size:22px;
 }
 
+.scholar a:hover{
+    text-decoration:underline;
+}
+
 .scholar img{
     width:34px;
     height:34px;
+    object-fit:contain;
 }
 
 .bio{
@@ -201,6 +208,7 @@ body{
 }
 
 @media(max-width:1100px){
+
     .top-section{
         grid-template-columns:1fr;
     }
@@ -227,7 +235,7 @@ body{
 <body>
 
 <button class="toggle" onclick="toggleTheme()">
-    sun_icon.png
+    sun_icon.png="Theme Toggle">
 </button>
 
 <div class="hero"></div>
@@ -243,9 +251,7 @@ body{
         <div class="position">PhD Student</div>
 
         <div class="university">
-            <a href="https://www.concordia.ca/"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer">
                 Concordia University
             </a>
         </div>
@@ -260,13 +266,13 @@ body{
         </div>
 
         <div class="bio">
-            I am a Ph.D. student at Concordia University in CIISE department with research and industrial experience in Machine Learning, Deep Learning, Representation Learning, Large Language Models, Federated Learning, Reinforcement Learning, and Explainable AI. Experienced in developing AI solutions for multimodal sensor data analysis, intelligent monitoring systems, and trustworthy AI.
+            I am a Ph.D. student at Concordia University in the CIISE department with research and industrial experience in Machine Learning, Deep Learning, Representation Learning, Large Language Models, Federated Learning, Reinforcement Learning, and Explainable AI. Experienced in developing AI solutions for multimodal sensor data analysis, intelligent monitoring systems, and trustworthy AI.
         </div>
 
-        <a href="CV.pdf" target="_blank" class="cv-button">
+        CV.pdf" target="_blank" class="cv-button">
             Download CV
         </a>
-        
+
     </div>
 
     <div class="separator"></div>
@@ -283,7 +289,7 @@ body{
             </div>
 
             <div class="research-box">
-                <h3>Foundation Models &amp; LLMs</h3>
+                <h3>Foundation Models & LLMs</h3>
                 <p>Large-scale models, reasoning and agentic AI.</p>
             </div>
 
