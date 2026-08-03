@@ -1,91 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Seyed Kawa Atapour</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
+<title>Seyed Kawa Atapour</title>
 
-        .profile {
-            width: 220px;
-            border-radius: 10px;
-        }
+<style>
+:root{
+    --bg:#111827;
+    --card:#1f2937;
+    --text:white;
+}
 
-        h1 {
-            margin-bottom: 5px;
-        }
+.light{
+    --bg:#f5f5f5;
+    --card:white;
+    --text:#222;
+}
 
-        h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
 
-        a {
-            text-decoration: none;
-            color: #0366d6;
-        }
-    </style>
+.hero{
+    height:350px;
+    background:url("background.jpg") center/cover;
+    position:relative;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    position:absolute;
+    left:50%;
+    bottom:-90px;
+    transform:translateX(-50%);
+}
+
+.content{
+    text-align:center;
+    padding-top:120px;
+    max-width:800px;
+    margin:auto;
+}
+
+.toggle{
+    position:fixed;
+    top:20px;
+    right:20px;
+    border:none;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+.section{
+    text-align:left;
+    margin-top:50px;
+    padding:0 20px;
+}
+</style>
 </head>
+
 <body>
 
-<div class="header">
-    <img src="Personal-Image.png" class="profile"ed Kawa Atapour</h1>
-        <h3>PhD Student & Researcher</h3>
+<button class="toggle" onclick="toggleTheme()">☀️</button>
 
-        <p>
-            Machine Learning |
-            Federated Learning |
-            Self-Supervised Learning
-        </p>
-
-        <p>
-            # |
-            <a href="ithub.com/KawaAtapourGitHub</a> |
-            #>
-        </p>
-    </div>
+<div class="hero">
+    <img src="Personal-Image.png" class="profile">
 </div>
 
-<h2>About Me</h2>
-<p>
-I am a PhD student and researcher interested in machine learning,
-federated learning, self-supervised learning, and representation learning.
-</p>
+<div class="content">
 
-<h2>Research Interests</h2>
-<ul>
-    <li>Federated Learning</li>
-    <li>Self-Supervised Learning</li>
-    <li>Representation Learning</li>
-    <li>Distributed AI Systems</li>
-</ul>
+    <h1>Seyed Kawa Atapour</h1>
 
-<h2>Publications</h2>
-<p>Coming soon.</p>
+    <h3>PhD Student & Researcher</h3>
 
-<h2>Projects</h2>
-<ul>
-    <li>FedD2P</li>
-    <li>SimCLR Research Projects</li>
-</ul>
+    <p>
+        Machine Learning |
+        Federated Learning |
+        Self-Supervised Learning
+    </p>
 
-<h2>Contact</h2>
-<p>
-Email: your-email@domain.com
-</p>
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a PhD student and researcher interested in machine learning,
+            federated learning, and self-supervised learning.
+        </p>
+
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Federated Learning</li>
+            <li>Self-Supervised Learning</li>
+            <li>Representation Learning</li>
+        </ul>
+
+        <h2>Publications</h2>
+        <p>Coming soon.</p>
+    </div>
+
+</div>
+
+<script>
+function toggleTheme(){
+    document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
