@@ -50,6 +50,9 @@ body{
     background:white;
     cursor:pointer;
     z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .toggle img{
@@ -104,6 +107,10 @@ body{
 .university a{
     color:inherit;
     text-decoration:none;
+}
+
+.university a:hover{
+    text-decoration:underline;
 }
 
 .scholar{
@@ -220,7 +227,7 @@ body{
 <body>
 
 <button class="toggle" onclick="toggleTheme()">
-    sun_icon.png
+    .png" alt="Theme Toggle">
 </button>
 
 <div class="hero"></div>
@@ -236,14 +243,18 @@ body{
         <div class="position">PhD Student</div>
 
         <div class="university">
-            ://www.concordia.ca/" target="_blank">
+            <a href="https://www.concordia.ca/"
+               target="_blank"
+               rel="noopener noreferrer">
                 Concordia University
             </a>
         </div>
-        
+
         <div class="scholar">
-            scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en" target="_blank">
-                google_scholar_icon.png" alt="Google Scholar">
+            olar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en"
+               target="_blank"
+               rel="noopener noreferrer">
+                google_scholar_icon.png
                 <span>Google Scholar</span>
             </a>
         </div>
@@ -252,7 +263,7 @@ body{
             I am a Ph.D. student at Concordia University in CIISE department with research and industrial experience in Machine Learning, Deep Learning, Representation Learning, Large Language Models, Federated Learning, Reinforcement Learning, and Explainable AI. Experienced in developing AI solutions for multimodal sensor data analysis, intelligent monitoring systems, and trustworthy AI.
         </div>
 
-        <a href="CV.pdf" target="_blank" class="cv-button">
+        .pdf" target="_blank" class="cv-button">
             Download CV
         </a>
 
@@ -272,7 +283,7 @@ body{
             </div>
 
             <div class="research-box">
-                <h3>Foundation Models & LLMs</h3>
+                <h3>Foundation Models &amp; LLMs</h3>
                 <p>Large-scale models, reasoning and agentic AI.</p>
             </div>
 
