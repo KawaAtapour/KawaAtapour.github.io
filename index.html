@@ -6,20 +6,20 @@
 <title>Kawa Atapour</title>
 
 <style>
+
 :root{
     --bg:#050816;
     --card:#111827;
     --text:#ffffff;
     --border:#334155;
     --separator:#ffffff;
-    --button:#4ea5ff;
 }
 
 .light{
-    --bg:#f5f5f5;
+    --bg:#f7f7f7;
     --card:#ffffff;
     --text:#111111;
-    --border:#d4d4d4;
+    --border:#d6d6d6;
     --separator:#000000;
 }
 
@@ -29,9 +29,9 @@
 
 body{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
     background:var(--bg);
     color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
     transition:.3s;
 }
 
@@ -44,13 +44,18 @@ body{
     position:fixed;
     top:20px;
     right:20px;
-    width:55px;
-    height:55px;
+    width:60px;
+    height:60px;
     border:none;
     border-radius:50%;
+    background:white;
     cursor:pointer;
-    font-size:20px;
     z-index:1000;
+}
+
+.toggle img{
+    width:32px;
+    height:32px;
 }
 
 .top-section{
@@ -59,49 +64,42 @@ body{
     padding:40px;
     display:grid;
     grid-template-columns:1fr 1px 1fr;
-    gap:40px;
+    gap:50px;
 }
 
 .separator{
     background:var(--separator);
-    opacity:.25;
+    opacity:.3;
 }
 
 .left-panel{
-    padding-right:30px;
-}
-
-.right-panel{
-    padding-left:30px;
+    text-align:center;
 }
 
 .profile{
-    display:block;
     width:260px;
     height:260px;
     object-fit:cover;
     border-radius:50%;
     border:6px solid white;
     background:white;
-    margin:-160px auto 25px auto;
+    margin-top:-170px;
 }
 
 .name{
-    text-align:center;
-    font-size:60px;
+    font-size:64px;
     font-weight:bold;
+    margin-top:20px;
 }
 
 .position{
-    text-align:center;
     font-size:28px;
     margin-top:10px;
 }
 
 .university{
-    text-align:center;
-    margin-top:15px;
     font-size:24px;
+    margin-top:15px;
 }
 
 .university a{
@@ -109,54 +107,50 @@ body{
     text-decoration:none;
 }
 
-.university a:hover{
-    text-decoration:underline;
-}
-
 .scholar{
-    text-align:center;
     margin-top:25px;
 }
 
-.scholar img{
-    width:36px;
-    height:36px;
-    vertical-align:middle;
+.scholar a{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:inherit;
+    font-size:22px;
 }
 
-.scholar a{
-    color:inherit;
-    text-decoration:none;
-    margin-left:10px;
-    font-size:22px;
+.scholar img{
+    width:34px;
+    height:34px;
 }
 
 .bio{
+    text-align:left;
     margin-top:35px;
-    line-height:1.8;
     font-size:22px;
-}
-
-.cv-container{
-    text-align:center;
-    margin-top:45px;
+    line-height:1.8;
 }
 
 .cv-button{
     display:inline-block;
-    padding:15px 35px;
-    background:var(--button);
+    margin-top:40px;
+    padding:14px 32px;
+    background:#67b7ff;
     color:white;
     text-decoration:none;
     border-radius:10px;
-    font-weight:bold;
     font-size:18px;
+    font-weight:bold;
 }
 
-.research-title{
+.cv-button:hover{
+    background:#4fa6f8;
+}
+
+.right-panel h2{
     text-align:center;
-    font-size:50px;
-    font-weight:bold;
+    font-size:52px;
     margin-bottom:40px;
 }
 
@@ -171,28 +165,22 @@ body{
     border:1px solid var(--border);
     border-radius:14px;
     padding:25px;
-    min-height:170px;
 }
 
 .research-box h3{
     margin-top:0;
-    font-size:26px;
-}
-
-.research-box p{
-    line-height:1.6;
-}
-
-.publications{
-    max-width:1500px;
-    margin:40px auto 80px auto;
-    padding:0 40px;
 }
 
 .publications-title{
     text-align:center;
-    font-size:60px;
-    margin-bottom:50px;
+    font-size:58px;
+    margin:60px 0 40px;
+}
+
+.publications{
+    max-width:1500px;
+    margin:auto;
+    padding:0 40px 80px;
 }
 
 .publication-grid{
@@ -201,13 +189,9 @@ body{
     gap:40px;
 }
 
-.publication-column{
-    padding:10px;
-}
-
 .publication-column h2{
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
 .publication-item{
@@ -215,7 +199,7 @@ body{
     border:1px solid var(--border);
     border-radius:12px;
     padding:20px;
-    margin-bottom:18px;
+    margin-bottom:15px;
     line-height:1.6;
 }
 
@@ -229,24 +213,27 @@ body{
         grid-template-columns:1fr;
     }
 
-    .separator{
-        display:none;
-    }
-
     .research-grid{
         grid-template-columns:1fr;
+    }
+
+    .separator{
+        display:none;
     }
 
     .name{
         font-size:42px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<button class="toggle" onclick="toggleTheme()">☀️</button>
+<button class="toggle" onclick="toggleTheme()">
+    sun_icon.png="Theme">
+</button>
 
 <div class="hero"></div>
 
@@ -254,15 +241,11 @@ body{
 
     <div class="left-panel">
 
-        <img src="Personal-Image.png" class="profile" alt="Profile Photo">
+        <img src="Personal-Image.png" class="profile" alt="Profile">
 
-        <div class="name">
-            Kawa Atapour
-        </div>
+        <div class="name">Kawa Atapour</div>
 
-        <div class="position">
-            PhD Student
-        </div>
+        <div class="position">PhD Student</div>
 
         <div class="university">
             <a href="https://www.concordia.ca/" target="_blank">
@@ -271,29 +254,24 @@ body{
         </div>
 
         <div class="scholar">
-            <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en" target="_blank">
-                olar.png" alt="Google Scholar">
+            /citations?user=8U-8CR0AAAAJ&hl=en" target="_blank">
+                _icon.png" alt="Google Scholar">
                 Google Scholar
             </a>
         </div>
 
         <div class="bio">
-
-            I am a Ph.D. student at Concordia University in CIISE
-            department with research and industrial experience in
-            Machine Learning, Deep Learning, Large Language Models,
-            Federated Learning, Reinforcement Learning, and
-            Explainable AI. Experienced in developing AI solutions
-            for multimodal sensor data analysis, intelligent
-            monitoring systems, and trustworthy AI.
-
+            I am a Ph.D. student at Concordia University in CIISE department
+            with research and industrial experience in Machine Learning,
+            Deep Learning, Large Language Models, Federated Learning,
+            Reinforcement Learning, and Explainable AI. Experienced in
+            developing AI solutions for multimodal sensor data analysis,
+            intelligent monitoring systems, and trustworthy AI.
         </div>
 
-        <div class="cv-container">
-            .pdf" target="_blank" class="cv-button">
-                Download CV
-            </a>
-        </div>
+        <a href="CV.pdf" target="_blank" class="cv-button">
+            Download CV
+        </a>
 
     </div>
 
@@ -301,42 +279,28 @@ body{
 
     <div class="right-panel">
 
-        <div class="research-title">
-            Research Interests
-        </div>
+        <h2>Research Interests</h2>
 
         <div class="research-grid">
 
             <div class="research-box">
                 <h3>Federated Learning</h3>
-                <p>
-                    Privacy-preserving distributed machine learning
-                    and edge intelligence.
-                </p>
+                <p>Privacy-preserving distributed learning systems.</p>
             </div>
 
             <div class="research-box">
                 <h3>Foundation Models & LLMs</h3>
-                <p>
-                    Large-scale pre-trained models, reasoning,
-                    adaptation, and agentic AI.
-                </p>
+                <p>Large-scale models, reasoning and agentic AI.</p>
             </div>
 
             <div class="research-box">
                 <h3>Explainable AI</h3>
-                <p>
-                    Trustworthy, transparent, and interpretable
-                    intelligent systems.
-                </p>
+                <p>Trustworthy and interpretable machine learning.</p>
             </div>
 
             <div class="research-box">
                 <h3>Reinforcement Learning</h3>
-                <p>
-                    Sequential decision-making and autonomous
-                    intelligent agents.
-                </p>
+                <p>Decision-making and autonomous intelligent systems.</p>
             </div>
 
         </div>
@@ -358,14 +322,11 @@ body{
             <h2>Journal Papers</h2>
 
             <div class="publication-item">
-                ECLIPSE: Embedding-Centered Foundation-Model Federated
-                Knowledge Transfer for Data-Free Edge Intelligence
-                (2026)
+                ECLIPSE: Embedding-Centered Foundation-Model Federated Knowledge Transfer for Data-Free Edge Intelligence (2026)
             </div>
 
             <div class="publication-item">
-                Intelligent Privacy-Preserving Demand Response for
-                Green Data Centers (2023)
+                Intelligent Privacy-Preserving Demand Response for Green Data Centers (2023)
             </div>
 
         </div>
@@ -377,20 +338,15 @@ body{
             <h2>Conference Papers</h2>
 
             <div class="publication-item">
-                KNFu: Effective Knowledge Fusion
-                (FUSION 2024)
+                KNFu: Effective Knowledge Fusion (FUSION 2024)
             </div>
 
             <div class="publication-item">
-                Multi-Model Federated Learning Optimization Based on
-                Multi-Agent Reinforcement Learning
-                (CAMSAP 2023)
+                Multi-Model Federated Learning Optimization Based on Multi-Agent Reinforcement Learning (CAMSAP 2023)
             </div>
 
             <div class="publication-item">
-                CoCo-POI: Collaborative Contrastive Learning for
-                Point-of-Interest Recommendation
-                (ICHMS 2025)
+                CoCo-POI: Collaborative Contrastive Learning for Point-of-Interest Recommendation (ICHMS 2025)
             </div>
 
         </div>
