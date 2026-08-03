@@ -1,240 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kawa Atapour</title>
-
-<style>
-:root{
-    --bg:#050816;
-    --card:#111827;
-    --text:#ffffff;
-    --border:#334155;
-    --separator:#ffffff;
-}
-
-.light{
-    --bg:#f7f7f7;
-    --card:#ffffff;
-    --text:#111111;
-    --border:#d6d6d6;
-    --separator:#000000;
-}
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Arial, Helvetica, sans-serif;
-    transition:.3s;
-}
-
-.hero{
-    height:340px;
-    background:url("Background.png") center center/cover no-repeat;
-}
-
-.toggle{
-    position:fixed;
-    top:20px;
-    right:20px;
-    width:60px;
-    height:60px;
-    border:none;
-    border-radius:50%;
-    background:white;
-    cursor:pointer;
-    z-index:1000;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.toggle img{
-    width:32px;
-    height:32px;
-    object-fit:contain;
-}
-
-.top-section{
-    max-width:1500px;
-    margin:auto;
-    padding:40px;
-    display:grid;
-    grid-template-columns:1fr 1px 1fr;
-    gap:50px;
-}
-
-.separator{
-    background:var(--separator);
-    opacity:.3;
-}
-
-.left-panel{
-    text-align:center;
-}
-
-.profile{
-    width:260px;
-    height:260px;
-    object-fit:cover;
-    border-radius:50%;
-    border:6px solid white;
-    background:white;
-    margin-top:-170px;
-}
-
-.name{
-    font-size:64px;
-    font-weight:bold;
-    margin-top:20px;
-}
-
-.position{
-    font-size:28px;
-    margin-top:10px;
-}
-
-.university{
-    font-size:24px;
-    margin-top:15px;
-}
-
-.university a{
-    color:inherit;
-    text-decoration:none;
-}
-
-.university a:hover{
-    text-decoration:underline;
-}
-
-.scholar{
-    margin-top:25px;
-}
-
-.scholar a{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    color:inherit;
-    text-decoration:none;
-    font-size:22px;
-}
-
-.scholar a:hover{
-    text-decoration:underline;
-}
-
-.scholar img{
-    width:34px;
-    height:34px;
-    object-fit:contain;
-}
-
-.bio{
-    text-align:left;
-    margin-top:35px;
-    font-size:22px;
-    line-height:1.8;
-}
-
-.cv-button{
-    display:inline-block;
-    margin-top:45px;
-    padding:15px 35px;
-    background:#67b7ff;
-    color:white;
-    text-decoration:none;
-    border-radius:12px;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.right-panel h2{
-    text-align:center;
-    font-size:52px;
-    margin-bottom:40px;
-}
-
-.research-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.research-box{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:25px;
-}
-
-.publications-title{
-    text-align:center;
-    font-size:58px;
-    margin:60px 0 40px;
-}
-
-.publications{
-    max-width:1500px;
-    margin:auto;
-    padding:0 40px 80px;
-}
-
-.publication-grid{
-    display:grid;
-    grid-template-columns:1fr 1px 1fr;
-    gap:40px;
-}
-
-.publication-column h2{
-    text-align:center;
-}
-
-.publication-item{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:20px;
-    margin-bottom:18px;
-    line-height:1.6;
-}
-
-@media(max-width:1100px){
-
-    .top-section{
-        grid-template-columns:1fr;
-    }
-
-    .publication-grid{
-        grid-template-columns:1fr;
-    }
-
-    .research-grid{
-        grid-template-columns:1fr;
-    }
-
-    .separator{
-        display:none;
-    }
-
-    .name{
-        font-size:42px;
-    }
-}
-</style>
-</head>
-
 <body>
 
 <button class="toggle" onclick="toggleTheme()">
-    sun_icon.png
+    " alt="Theme Toggle">
 </button>
 
 <div class="hero"></div>
@@ -243,14 +10,14 @@ body{
 
     <div class="left-panel">
 
-        Image.png" class="profile" alt="Profile">
+        <img src="Personal-Image.png" class="profile" alt="Profile">
 
         <div class="name">Kawa Atapour</div>
 
         <div class="position">PhD Student</div>
 
         <div class="university">
-            <a href="https://www.concordia.ca/"
+            https://www.concordia.ca/"
                target="_blank"
                rel="noopener noreferrer">
                 Concordia University
@@ -261,7 +28,7 @@ body{
             <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en"
                target="_blank"
                rel="noopener noreferrer">
-                google_scholar_icon.png
+                google_scholar_icon.png" alt="Google Scholar">
                 <span>Google Scholar</span>
             </a>
         </div>
@@ -363,4 +130,3 @@ function toggleTheme(){
 </script>
 
 </body>
-</html>
