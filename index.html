@@ -3,22 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Kawa Atapour</title>
 
 <style>
 :root{
-    --bg:#0f1117;
-    --card:#171b24;
-    --text:#f5f5f5;
-    --border:#3a3f4b;
+    --bg:#0b0d17;
+    --card:#131826;
+    --text:#ffffff;
+    --border:#30384d;
 }
 
 .light{
-    --bg:#f7f7f7;
+    --bg:#f4f4f4;
     --card:#ffffff;
-    --text:#222;
-    --border:#dcdcdc;
+    --text:#202020;
+    --border:#dddddd;
 }
 
 *{
@@ -30,19 +29,20 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     background:var(--bg);
     color:var(--text);
+    transition:.3s;
 }
 
 .hero{
-    height:350px;
-    background:url("Background.png") center/cover;
+    height:340px;
+    background:url("Background.png") center center/cover no-repeat;
 }
 
 .toggle{
     position:fixed;
     top:20px;
     right:20px;
-    width:50px;
-    height:50px;
+    width:55px;
+    height:55px;
     border:none;
     border-radius:50%;
     cursor:pointer;
@@ -50,47 +50,48 @@ body{
     z-index:1000;
 }
 
-.container{
+.top-section{
     max-width:1400px;
-    margin:auto;
+    margin:0 auto;
     padding:40px;
-    display:flex;
+    display:grid;
+    grid-template-columns:1fr 1fr;
     gap:50px;
 }
 
-.sidebar{
-    width:320px;
+.left-panel{
     text-align:center;
 }
 
 .profile{
-    width:230px;
-    height:230px;
-    border-radius:50%;
+    width:250px;
+    height:250px;
     object-fit:cover;
-    border:5px solid white;
-    margin-top:-150px;
+    border-radius:50%;
+    border:6px solid white;
+    margin-top:-170px;
     background:white;
 }
 
 .name{
-    font-size:42px;
+    font-size:58px;
     font-weight:bold;
     margin-top:20px;
 }
 
-.title{
-    font-size:24px;
-    margin-top:10px;
+.university{
+    margin-top:15px;
+    font-size:22px;
 }
 
-.university{
-    font-size:20px;
-    margin-top:10px;
+.university a{
+    color:inherit;
+    text-decoration:none;
 }
 
 .scholar{
     margin-top:20px;
+    font-size:20px;
 }
 
 .scholar a{
@@ -98,65 +99,104 @@ body{
     text-decoration:none;
 }
 
-.cv-button{
+.bio{
+    margin-top:30px;
+    text-align:left;
+    line-height:1.8;
+    font-size:20px;
+}
+
+.cv-btn{
     display:inline-block;
     margin-top:25px;
-    padding:12px 24px;
-    background:#2f6fff;
+    padding:14px 28px;
+    background:#2a6ff2;
     color:white;
-    border-radius:8px;
     text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
 }
 
-.content{
-    flex:1;
+.right-panel{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.card{
+.right-panel h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:35px;
+}
+
+.research-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.research-box{
     background:var(--card);
+    border:1px solid var(--border);
     border-radius:15px;
-    padding:30px;
-    margin-bottom:30px;
+    padding:25px;
+    min-height:140px;
 }
 
-.card h2{
+.research-box h3{
     margin-top:0;
 }
 
-.skills-grid{
+.publications{
+    max-width:1400px;
+    margin:30px auto 80px auto;
+    padding:0 40px;
+}
+
+.publications-title{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:40px;
+}
+
+.publication-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
 }
 
-.bar{
-    width:100%;
-    height:10px;
-    border-radius:10px;
-    overflow:hidden;
-    background:#2f3545;
-    margin-bottom:20px;
+.publication-card{
+    background:var(--card);
+    border-radius:15px;
+    padding:30px;
 }
 
-.fill{
-    height:100%;
-    background:#4ecdc4;
-}
-
-.hobby-fill{
-    background:#f4b000;
-}
-
-.research-box{
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:20px;
-    margin-bottom:15px;
-}
-
-.research-box h3{
+.publication-card h2{
+    text-align:center;
     margin-top:0;
-    margin-bottom:8px;
+}
+
+.publication-card ul{
+    line-height:1.8;
+}
+
+@media(max-width:1000px){
+
+    .top-section{
+        grid-template-columns:1fr;
+    }
+
+    .publication-grid{
+        grid-template-columns:1fr;
+    }
+
+    .research-grid{
+        grid-template-columns:1fr;
+    }
+
+    .name{
+        font-size:40px;
+    }
 }
 </style>
 </head>
@@ -167,24 +207,37 @@ body{
 
 <div class="hero"></div>
 
-<div class="container">
+<div class="top-section">
 
-    <div class="sidebar">
+    <div class="left-panel">
 
-        <img src="Personal-Image.png" class="profile">
+        -Image.png" class="profile">
 
         <div class="name">Kawa Atapour</div>
 
-        <div class="title">PhD Student</div>
-
-        <div class="university">Concordia University</div>
+        <div class="university">
+            <a href="https://www.concordia.ca/" target="_blank">
+                Concordia University
+            </a>
+        </div>
 
         <div class="scholar">
             🎓
-            <br><br>
             <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en" target="_blank">
                 Google Scholar
             </a>
+        </div>
+
+        <div class="bio">
+
+            I am a Ph.D. student at Concordia University in CIISE
+            department with research and industrial experience in
+            Machine Learning, Deep Learning, Large Language Models,
+            Federated Learning, Reinforcement Learning, and
+            Explainable AI. Experienced in developing AI solutions
+            for multimodal sensor data analysis, intelligent
+            monitoring systems, and trustworthy AI.
+
         </div>
 
         CV.pdf
@@ -193,114 +246,42 @@ body{
 
     </div>
 
-    <div class="content">
+    <div class="right-panel">
 
-        <div class="card">
-            <h2>About Me</h2>
+        <h2>Research Interests</h2>
 
-            <p>
-                Ph.D. student in Electrical and Computer Engineering at Concordia University
-                with research and industrial experience in Machine Learning, Deep Learning,
-                Large Language Models, Federated Learning, Reinforcement Learning, and
-                Explainable AI.
-            </p>
-
-            <p>
-                Experienced in developing AI solutions for multimodal sensor data analysis,
-                intelligent monitoring systems, and trustworthy AI.
-            </p>
-
-            <p>
-                Author of multiple peer-reviewed publications in machine learning and
-                distributed AI.
-            </p>
-
-            <p>
-                Seeking to apply advanced AI and data analytics skills to real-world
-                challenges in the energy sector, including predictive modeling,
-                optimization, intelligent monitoring, and autonomous decision-making.
-            </p>
-        </div>
-
-        <div class="card">
-
-            <h2>Skills & Hobbies</h2>
-
-            <div class="skills-grid">
-
-                <div>
-
-                    <h3>Technical Skills</h3>
-
-                    <p>🐍 Python</p>
-                    <div class="bar">
-                        <div class="fill" style="width:95%"></div>
-                    </div>
-
-                    <p>🧠 Deep Learning</p>
-                    <div class="bar">
-                        <div class="fill" style="width:90%"></div>
-                    </div>
-
-                    <p>🔥 PyTorch</p>
-                    <div class="bar">
-                        <div class="fill" style="width:90%"></div>
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <h3>Hobbies</h3>
-
-                    <p>🥾 Hiking</p>
-                    <div class="bar">
-                        <div class="fill hobby-fill" style="width:75%"></div>
-                    </div>
-
-                    <p>📚 Reading</p>
-                    <div class="bar">
-                        <div class="fill hobby-fill" style="width:90%"></div>
-                    </div>
-
-                    <p>📷 Photography</p>
-                    <div class="bar">
-                        <div class="fill hobby-fill" style="width:80%"></div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h2>Research Interests</h2>
-
-            <div class="research-box">
-                <h3>Machine Learning</h3>
-                <p>Scalable and data-driven learning systems.</p>
-            </div>
+        <div class="research-grid">
 
             <div class="research-box">
                 <h3>Federated Learning</h3>
-                <p>Privacy-preserving distributed model training.</p>
+                <p>
+                    Privacy-preserving distributed machine learning
+                    and edge intelligence.
+                </p>
             </div>
 
             <div class="research-box">
-                <h3>Large Language Models</h3>
-                <p>Reasoning, instruction tuning, and foundation models.</p>
-            </div>
-
-            <div class="research-box">
-                <h3>Reinforcement Learning</h3>
-                <p>Decision-making and autonomous intelligent systems.</p>
+                <h3>Foundation Models & LLMs</h3>
+                <p>
+                    Large-scale pre-trained models, reasoning,
+                    adaptation, and AI agents.
+                </p>
             </div>
 
             <div class="research-box">
                 <h3>Explainable AI</h3>
-                <p>Trustworthy, interpretable, and transparent AI systems.</p>
+                <p>
+                    Trustworthy and transparent machine learning
+                    systems.
+                </p>
+            </div>
+
+            <div class="research-box">
+                <h3>Reinforcement Learning</h3>
+                <p>
+                    Sequential decision-making and autonomous
+                    intelligent systems.
+                </p>
             </div>
 
         </div>
@@ -309,8 +290,64 @@ body{
 
 </div>
 
+<div class="publications">
+
+    <div class="publications-title">
+        My Publications
+    </div>
+
+    <div class="publication-grid">
+
+        <div class="publication-card">
+
+            <h2>Journal Papers</h2>
+
+            <ul>
+                <li>
+                    ECLIPSE: Embedding-Centered Foundation-Model
+                    Federated Knowledge Transfer for Data-Free Edge
+                    Intelligence (2026)
+                </li>
+
+                <li>
+                    Intelligent Privacy-Preserving Demand Response
+                    for Green Data Centers (2023)
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="publication-card">
+
+            <h2>Conference Papers</h2>
+
+            <ul>
+                <li>
+                    KNFu: Effective Knowledge Fusion
+                    (FUSION 2024)
+                </li>
+
+                <li>
+                    Multi-Model Federated Learning Optimization
+                    Based on Multi-Agent Reinforcement Learning
+                    (CAMSAP 2023)
+                </li>
+
+                <li>
+                    CoCo-POI: Collaborative Contrastive Learning
+                    for Point-of-Interest Recommendation
+                    (ICHMS 2025)
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
 <script>
-function toggleTheme() {
+function toggleTheme(){
     document.body.classList.toggle("light");
 }
 </script>
