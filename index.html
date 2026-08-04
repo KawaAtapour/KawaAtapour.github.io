@@ -12,7 +12,9 @@
     --text:#ffffff;
     --border:#334155;
     --separator:#ffffff;
-    --accent:#67b7ff; /* Clean light blue color for language rings */
+    --accent:#67b7ff;
+    --skill-color:#48b5b5; /* Turquoise color for technical skills */
+    --hobby-color:#f5b025; /* Amber color for hobbies */
 }
 
 .light{
@@ -32,6 +34,7 @@ body{
     background:var(--bg);
     color:var(--text);
     font-family:Arial, Helvetica, sans-serif;
+    font-size:15px; /* Decreased general font size */
     transition:.3s;
 }
 
@@ -44,8 +47,8 @@ body{
     position:fixed;
     top:20px;
     right:20px;
-    width:60px;
-    height:60px;
+    width:66px; /* Increased a bit to comfortably fit the bigger icon */
+    height:66px;
     border:none;
     border-radius:50%;
     background:white;
@@ -56,9 +59,10 @@ body{
     justify-content:center;
 }
 
+/* Increased the size of sun_icon.png a bit */
 .toggle img{
-    width:46px;
-    height:46px;
+    width:52px;
+    height:52px;
     object-fit:contain;
 }
 
@@ -91,18 +95,18 @@ body{
 }
 
 .name{
-    font-size:64px;
+    font-size:56px; /* Decreased font size */
     font-weight:bold;
     margin-top:20px;
 }
 
 .position{
-    font-size:28px;
+    font-size:24px; /* Decreased font size */
     margin-top:10px;
 }
 
 .university{
-    font-size:24px;
+    font-size:21px; /* Decreased font size */
     margin-top:15px;
 }
 
@@ -125,37 +129,37 @@ body{
     gap:10px;
     color:inherit;
     text-decoration:none;
-    font-size:22px;
+    font-size:20px; /* Decreased font size */
 }
 
 .scholar img{
-    width:34px;
-    height:34px;
+    width:30px;
+    height:30px;
     object-fit:contain;
 }
 
 .bio{
-    text-align:left;
+    text-align:justify; /* Justified text line alignment */
     margin-top:35px;
-    font-size:22px;
+    font-size:19px; /* Decreased font size */
     line-height:1.8;
 }
 
 .cv-button{
     display:inline-block;
     margin-top:45px;
-    padding:15px 35px;
+    padding:12px 30px;
     background:#67b7ff;
     color:white;
     text-decoration:none;
     border-radius:12px;
-    font-size:18px;
+    font-size:16px; /* Decreased font size */
     font-weight:bold;
 }
 
 .right-panel h2{
     text-align:center;
-    font-size:52px;
+    font-size:46px; /* Decreased font size */
     margin-bottom:40px;
 }
 
@@ -172,9 +176,19 @@ body{
     padding:25px;
 }
 
+.research-box h3{
+    font-size:18px; /* Decreased font size */
+    margin-top:0;
+}
+
+.research-box p{
+    font-size:14px; /* Decreased font size */
+    text-align:justify; /* Justified text line alignment */
+}
+
 .publications-title{
     text-align:center;
-    font-size:58px;
+    font-size:52px; /* Decreased font size */
     margin:60px 0 40px;
 }
 
@@ -192,6 +206,7 @@ body{
 
 .publication-column h2{
     text-align:center;
+    font-size:28px; /* Decreased font size */
 }
 
 .publication-item{
@@ -201,10 +216,22 @@ body{
     padding:20px;
     margin-bottom:18px;
     line-height:1.6;
+    font-size:15px; /* Decreased font size */
+    text-align:justify; /* Justified text line alignment */
+}
+
+/* Horizontal section break rule line between panel blocks */
+.section-divider {
+    max-width: 1420px;
+    margin: 40px auto;
+    border: 0;
+    height: 1px;
+    background: var(--separator);
+    opacity: 0.3;
 }
 
 /* ==========================================================================
-   NEW WORKSPACE: LANGUAGES, SKILLS & HOBBIES GRID
+   LANGUAGES, SKILLS & HOBBIES SECTION 
    ========================================================================== */
 .bottom-section {
     max-width:1500px;
@@ -212,23 +239,29 @@ body{
     padding:0 40px 80px;
     display:grid;
     grid-template-columns:1fr 1px 1fr;
-    gap:40px;
+    gap:50px;
 }
 
 .bottom-section h2 {
     text-align:center;
-    font-size:52px;
+    font-size:46px; /* Decreased font size */
     margin-top: 0;
     margin-bottom:40px;
 }
 
-/* Languages Section Styling matching your reference image */
+.bottom-panel-right h3, .bottom-panel-left h3 {
+    text-align: left;
+    font-size: 24px; /* Decreased font size */
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Languages Area Styles */
 .languages-container {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 25px;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .lang-item {
@@ -236,72 +269,104 @@ body{
 }
 
 .progress-circle {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     background: var(--bg);
-    border: 8px solid var(--accent); /* Outer continuous ring matching image */
+    border: 8px solid var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px; /* Decreased font size */
     font-weight: bold;
-    margin-bottom: 15px;
-    box-shadow: inset 0 0 0 4px var(--bg);
+    margin-bottom: 12px;
+}
+
+/* 50% complete French language styling slice */
+.progress-circle.half {
+    background: linear-gradient(90deg, var(--bg) 50%, transparent 50%), 
+                linear-gradient(90deg, #334155 50%, var(--accent) 50%);
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+.progress-circle.half::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 8px; right: 8px; bottom: 8px;
+    background: var(--bg);
+    border-radius: 50%;
+    z-index: -1;
 }
 
 .lang-label {
-    font-size: 20px;
+    font-size: 18px; /* Decreased font size */
     font-weight: 500;
 }
 
-/* Skills & Hobbies List Content blocks */
+/* Progress-bars layout system replicating uploaded image sample */
 .skills-hobbies-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 35px;
 }
 
-.info-block {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 25px;
-}
-
-.info-block h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #67b7ff;
-}
-
-.tag-container {
+.bar-group {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.tag-item {
-    background: rgba(103, 183, 255, 0.15);
-    border: 1px solid var(--accent);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 16px;
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bar-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px; /* Decreased font size */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.bar-track {
+    width: 100%;
+    height: 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.bar-fill.technical {
+    background: var(--skill-color);
+}
+
+.bar-fill.hobby {
+    background: var(--hobby-color);
 }
 
 @media(max-width:1100px){
     .top-section, .publication-grid, .research-grid, .bottom-section{
         grid-template-columns:1fr;
     }
-    .separator{
+    .separator, .section-divider{
         display:none;
     }
     .name{
-        font-size:42px;
+        font-size:38px;
     }
-    .bottom-section h2 {
-        font-size: 40px;
+    .right-panel h2, .publications-title, .bottom-section h2 {
+        font-size: 36px;
     }
 }
 </style>
@@ -320,11 +385,11 @@ body{
         <div class="name">Kawa Atapour</div>
         <div class="position">PhD Student</div>
         <div class="university">
-            <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer">Concordia University</a>
+            <a href="https://concordia.ca" target="_blank" rel="noopener noreferrer">Concordia University</a>
         </div>
         <div class="scholar">
-            <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                <img src="google_scholar_icon.png">
+            <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
+                <img src="google_scholar_icon.png" alt="Google Scholar Icon">
                 <span>Google Scholar</span>
             </a>
         </div>
@@ -359,6 +424,8 @@ body{
     </div>
 </div>
 
+<hr class="section-divider"> <!-- Added clean separator path lines between pairs -->
+
 <div class="publications">
     <div class="publications-title">My Publications</div>
     <div class="publication-grid">
@@ -368,52 +435,3 @@ body{
             <div class="publication-item">Intelligent Privacy-Preserving Demand Response for Green Data Centers (2023)</div>
         </div>
         <div class="separator"></div>
-        <div class="publication-column">
-            <h2>Conference Papers</h2>
-            <div class="publication-item">KNFu: Effective Knowledge Fusion (FUSION 2024)</div>
-            <div class="publication-item">Multi-Model Federated Learning Optimization Based on Multi-Agent Reinforcement Learning (CAMSAP 2023)</div>
-            <div class="publication-item">CoCo-POI: Collaborative Contrastive Learning for Point-of-Interest Recommendation (ICHMS 2025)</div>
-        </div>
-    </div>
-</div>
-
-<!-- NEW LAYOUT SECTION -->
-<div class="bottom-section">
-    <!-- Left Panel: Languages with progress circles -->
-    <div class="bottom-panel-left">
-        <h2>Languages</h2>
-        <div class="languages-container">
-            <div class="lang-item">
-                <div class="progress-circle">100%</div>
-                <div class="lang-label">English</div>
-            </div>
-            <div class="lang-item">
-                <div class="progress-circle">100%</div>
-                <div class="lang-label">Kurdish</div>
-            </div>
-            <div class="lang-item">
-                <div class="progress-circle">100%</div>
-                <div class="lang-label">Persian</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="separator"></div>
-
-    <!-- Right Panel: Skills & Hobbies Content Boxes -->
-    <div class="bottom-panel-right">
-        <h2>Skills &amp; Hobbies</h2>
-        <div class="skills-hobbies-container">
-            <div class="info-block">
-                <h3>Technical Skills</h3>
-                <div class="tag-container">
-                    <span class="tag-item">Python</span>
-                    <span class="tag-item">PyTorch</span>
-                    <span class="tag-item">TensorFlow</span>
-                    <span class="tag-item">Git</span>
-                    <span class="tag-item">Linux</span>
-                </div>
-            </div>
-            <div class="info-block">
-                <h3>Hobbies &amp; Interests</h3>
-                <div class="tag-container">
