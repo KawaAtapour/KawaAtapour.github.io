@@ -46,29 +46,12 @@ body{
     background:url("Background.png") center center/cover no-repeat;
 }
 
-.toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 48px;  /* Keeps the blue circle container exactly the same size */
-    height: 48px; /* Keeps the blue circle container exactly the same size */
-    border: none;
-    border-radius: 50%;
-    background: var(--toggle-bg); 
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    padding: 0;           /* Ensures no hidden spacing restricts the image */
-    overflow: hidden;     /* Prevents any edges from leaking out */
-}
+
 
 /* Enlarges the sun graphic to take up almost the entire blue circle */
 .toggle img {
-    width: 64px;  /* Increased from 34px to make it visibly larger */
-    height: 64px; /* Increased from 34px to make it visibly larger */
+    width: 44px;  /* Increased from 34px to make it visibly larger */
+    height: 44px; /* Increased from 34px to make it visibly larger */
     object-fit: contain;
 }
 
@@ -386,11 +369,13 @@ body{
         <div class="university">
             <a href="https://concordia.ca" target="_blank" rel="noopener noreferrer">Concordia University</a>
         </div>
+        
         <div class="scholar">
-            <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
+            <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
                 <img src="google_scholar_icon.png" alt="Google Scholar Icon">
             </a>
         </div>
+
         <div class="bio">
             I am a Ph.D. student at Concordia University in CIISE department with research and industrial experience in Machine Learning, Deep Learning, Representation Learning, Large Language Models, Federated Learning, Reinforcement Learning, and Explainable AI. Experienced in developing AI solutions for multimodal sensor data analysis, intelligent monitoring systems, and trustworthy AI.
         </div>
