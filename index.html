@@ -55,9 +55,10 @@ body{
     justify-content:center;
 }
 
+/* 1. Enlarged sun icon to better fit the white circle container */
 .toggle img{
-    width:32px;
-    height:32px;
+    width:46px;
+    height:46px;
     object-fit:contain;
 }
 
@@ -79,14 +80,15 @@ body{
     text-align:center;
 }
 
+/* 3. Shrunk profile size down to 200px and adjusted margin offset */
 .profile{
-    width:260px;
-    height:260px;
+    width:200px;
+    height:200px;
     object-fit:cover;
     border-radius:50%;
     border:6px solid white;
     background:white;
-    margin-top:-170px;
+    margin-top:-110px;
 }
 
 .name{
@@ -226,21 +228,6 @@ body{
 }
 </style>
 </head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
 
 
@@ -274,6 +261,7 @@ body{
             <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en"
                target="_blank"
                rel="noopener noreferrer">
+                <!-- 2. This structure is perfectly ready to load your asset -->
                 <img src="scholar_icon.png" alt="Google Scholar Icon">
                 <span>Google Scholar</span>
             </a>
@@ -378,3 +366,4 @@ function toggleTheme(){
 </script>
 
 </body>
+</html>
