@@ -17,6 +17,7 @@
     --hobby-color:#f5b025;
 }
 
+/* Overriding theme values used directly by custom CSS variables */
 .light{
     --bg:#f7f7f7;
     --card:#ffffff;
@@ -47,8 +48,8 @@ body{
     position:fixed;
     top:20px;
     right:20px;
-    width:66px;
-    height:66px;
+    width:76px; /* Expanded button size to give space for larger icon */
+    height:76px;
     border:none;
     border-radius:50%;
     background:white;
@@ -57,11 +58,13 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* Made the sun icon larger as requested */
 .toggle img{
-    width:52px;
-    height:52px;
+    width:62px;
+    height:62px;
     object-fit:contain;
 }
 
@@ -229,7 +232,7 @@ body{
 }
 
 /* ==========================================================================
-   BOTTOM SECTION GRID
+   BOTTOM SECTION GRID (STRUCTURALLY FIXED)
    ========================================================================== */
 .bottom-section {
     max-width:1500px;
@@ -361,6 +364,7 @@ body{
 </head>
 <body>
 
+<!-- Theme Button Trigger -->
 <button class="toggle" onclick="toggleTheme()">
     <img src="sun_icon.png" alt="Theme Toggle">
 </button>
@@ -434,7 +438,6 @@ body{
 
 <hr class="section-divider">
 
-<!-- FIX: Balanced container elements to display everything correctly -->
 <div class="bottom-section">
     <div class="bottom-panel-left">
         <h2>Languages</h2>
@@ -445,8 +448,3 @@ body{
             </div>
             <div class="lang-item">
                 <div class="progress-circle">100%</div>
-                <div class="lang-label">Kurdish</div>
-            </div>
-            <div class="lang-item">
-                <div class="progress-circle">100%</div>
-                <div class="lang-label">Persian</div>
