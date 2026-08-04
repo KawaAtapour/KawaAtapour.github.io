@@ -13,8 +13,8 @@
     --border:#334155;
     --separator:#ffffff;
     --accent:#67b7ff;
-    --skill-color:#48b5b5; /* Turquoise color for technical skills */
-    --hobby-color:#f5b025; /* Amber color for hobbies */
+    --skill-color:#48b5b5;
+    --hobby-color:#f5b025;
 }
 
 .light{
@@ -34,7 +34,7 @@ body{
     background:var(--bg);
     color:var(--text);
     font-family:Arial, Helvetica, sans-serif;
-    font-size:15px; /* Decreased general font size */
+    font-size:15px;
     transition:.3s;
 }
 
@@ -47,7 +47,7 @@ body{
     position:fixed;
     top:20px;
     right:20px;
-    width:66px; /* Increased a bit to comfortably fit the bigger icon */
+    width:66px;
     height:66px;
     border:none;
     border-radius:50%;
@@ -59,7 +59,6 @@ body{
     justify-content:center;
 }
 
-/* Increased the size of sun_icon.png a bit */
 .toggle img{
     width:52px;
     height:52px;
@@ -95,18 +94,18 @@ body{
 }
 
 .name{
-    font-size:56px; /* Decreased font size */
+    font-size:56px;
     font-weight:bold;
     margin-top:20px;
 }
 
 .position{
-    font-size:24px; /* Decreased font size */
+    font-size:24px;
     margin-top:10px;
 }
 
 .university{
-    font-size:21px; /* Decreased font size */
+    font-size:21px;
     margin-top:15px;
 }
 
@@ -129,7 +128,7 @@ body{
     gap:10px;
     color:inherit;
     text-decoration:none;
-    font-size:20px; /* Decreased font size */
+    font-size:20px;
 }
 
 .scholar img{
@@ -139,9 +138,9 @@ body{
 }
 
 .bio{
-    text-align:justify; /* Justified text line alignment */
+    text-align:justify;
     margin-top:35px;
-    font-size:19px; /* Decreased font size */
+    font-size:19px;
     line-height:1.8;
 }
 
@@ -153,13 +152,13 @@ body{
     color:white;
     text-decoration:none;
     border-radius:12px;
-    font-size:16px; /* Decreased font size */
+    font-size:16px;
     font-weight:bold;
 }
 
 .right-panel h2{
     text-align:center;
-    font-size:46px; /* Decreased font size */
+    font-size:46px;
     margin-bottom:40px;
 }
 
@@ -177,18 +176,18 @@ body{
 }
 
 .research-box h3{
-    font-size:18px; /* Decreased font size */
+    font-size:18px;
     margin-top:0;
 }
 
 .research-box p{
-    font-size:14px; /* Decreased font size */
-    text-align:justify; /* Justified text line alignment */
+    font-size:14px;
+    text-align:justify;
 }
 
 .publications-title{
     text-align:center;
-    font-size:52px; /* Decreased font size */
+    font-size:52px;
     margin:60px 0 40px;
 }
 
@@ -206,7 +205,7 @@ body{
 
 .publication-column h2{
     text-align:center;
-    font-size:28px; /* Decreased font size */
+    font-size:28px;
 }
 
 .publication-item{
@@ -216,11 +215,10 @@ body{
     padding:20px;
     margin-bottom:18px;
     line-height:1.6;
-    font-size:15px; /* Decreased font size */
-    text-align:justify; /* Justified text line alignment */
+    font-size:15px;
+    text-align:justify;
 }
 
-/* Horizontal section break rule line between panel blocks */
 .section-divider {
     max-width: 1420px;
     margin: 40px auto;
@@ -231,7 +229,7 @@ body{
 }
 
 /* ==========================================================================
-   LANGUAGES, SKILLS & HOBBIES SECTION 
+   BOTTOM SECTION GRID
    ========================================================================== */
 .bottom-section {
     max-width:1500px;
@@ -244,19 +242,11 @@ body{
 
 .bottom-section h2 {
     text-align:center;
-    font-size:46px; /* Decreased font size */
+    font-size:46px;
     margin-top: 0;
     margin-bottom:40px;
 }
 
-.bottom-panel-right h3, .bottom-panel-left h3 {
-    text-align: left;
-    font-size: 24px; /* Decreased font size */
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-/* Languages Area Styles */
 .languages-container {
     display: flex;
     justify-content: center;
@@ -277,12 +267,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px; /* Decreased font size */
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
 }
 
-/* 50% complete French language styling slice */
 .progress-circle.half {
     background: linear-gradient(90deg, var(--bg) 50%, transparent 50%), 
                 linear-gradient(90deg, #334155 50%, var(--accent) 50%);
@@ -300,11 +289,10 @@ body{
 }
 
 .lang-label {
-    font-size: 18px; /* Decreased font size */
+    font-size: 18px;
     font-weight: 500;
 }
 
-/* Progress-bars layout system replicating uploaded image sample */
 .skills-hobbies-container {
     display: flex;
     flex-direction: column;
@@ -327,7 +315,7 @@ body{
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px; /* Decreased font size */
+    font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -389,7 +377,7 @@ body{
         </div>
         <div class="scholar">
             <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
-                <img src="google_scholar_icon.png">
+                <img src="google_scholar_icon.png" alt="Google Scholar Icon">
                 <span>Google Scholar</span>
             </a>
         </div>
@@ -424,7 +412,7 @@ body{
     </div>
 </div>
 
-<hr class="section-divider"> <!-- Added clean separator path lines between pairs -->
+<hr class="section-divider">
 
 <div class="publications">
     <div class="publications-title">My Publications</div>
@@ -435,3 +423,30 @@ body{
             <div class="publication-item">Intelligent Privacy-Preserving Demand Response for Green Data Centers (2023)</div>
         </div>
         <div class="separator"></div>
+        <div class="publication-column">
+            <h2>Conference Papers</h2>
+            <div class="publication-item">KNFu: Effective Knowledge Fusion (FUSION 2024)</div>
+            <div class="publication-item">Multi-Model Federated Learning Optimization Based on Multi-Agent Reinforcement Learning (CAMSAP 2023)</div>
+            <div class="publication-item">CoCo-POI: Collaborative Contrastive Learning for Point-of-Interest Recommendation (ICHMS 2025)</div>
+        </div>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- FIX: Balanced container elements to display everything correctly -->
+<div class="bottom-section">
+    <div class="bottom-panel-left">
+        <h2>Languages</h2>
+        <div class="languages-container">
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">English</div>
+            </div>
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">Kurdish</div>
+            </div>
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">Persian</div>
