@@ -63,8 +63,8 @@ body{
 }
 
 .toggle img {
-    width: 44px;        /* The sun asset displays bare on your background */
-    height: 44px;
+    width: 64px;        /* The sun asset displays bare on your background */
+    height: 64px;
     object-fit: contain;
 }
 
@@ -298,23 +298,31 @@ body{
     font-size: 18px;
     font-weight: 500;
 }
-
+/* Progress-bars side-by-side layout system */
 .skills-hobbies-container {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Puts Technical Skills and Hobbies next to each other */
+    gap: 40px;
+    width: 100%;
 }
 
 .bar-group {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+}
+
+.bar-group h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .bar-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    width: 100%;
 }
 
 .bar-label {
@@ -326,14 +334,18 @@ body{
     letter-spacing: 1px;
 }
 
+/* FIXED: Changed transparent background to match your border scheme */
 .bar-track {
     width: 100%;
     height: 12px;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05); 
     border: 1px solid var(--border);
     border-radius: 6px;
     overflow: hidden;
-    position: relative;
+}
+
+.light .bar-track {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .bar-fill {
@@ -348,6 +360,7 @@ body{
 .bar-fill.hobby {
     background: var(--hobby-color);
 }
+
 
 @media(max-width:1100px){
     .top-section, .publication-grid, .research-grid, .bottom-section{
@@ -466,42 +479,44 @@ body{
     </div>
 
 <div class="bottom-panel-right">
-    <h2>Skills &amp; Hobbies</h2>
-    <div class="skills-hobbies-container">
-        
-        <!-- Technical Skills -->
-        <div class="bar-group">
-            <div class="bar-item">
-                <div class="bar-label">🐍 PYTHON</div>
-                <div class="bar-track"><div class="bar-fill technical" style="width: 85%;"></div></div>
+    <h2>Skills &amp; Hobbies</h2>        <div class="skills-hobbies-container">
+            
+            <!-- Left Column: Technical Skills -->
+            <div class="bar-group">
+                <h3>Technical Skills</h3>
+                <div class="bar-item">
+                    <div class="bar-label">🐍 PYTHON</div>
+                    <div class="bar-track"><div class="bar-fill technical" style="width: 85%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">®️ MATLAB</div>
+                    <div class="bar-track"><div class="bar-fill technical" style="width: 95%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">🔥 PYTORCH</div>
+                    <div class="bar-track"><div class="bar-fill technical" style="width: 40%;"></div></div>
+                </div>
             </div>
-            <div class="bar-item">
-                <div class="bar-label">®️ MATLAB</div>
-                <div class="bar-track"><div class="bar-fill technical" style="width: 95%;"></div></div>
+
+            <!-- Right Column: Hobbies -->
+            <div class="bar-group">
+                <h3>Hobbies</h3>
+                <div class="bar-item">
+                    <div class="bar-label">🏃 HIKING</div>
+                    <div class="bar-track"><div class="bar-fill hobby" style="width: 70%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">🐕 DOGS</div>
+                    <div class="bar-track"><div class="bar-fill hobby" style="width: 98%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">📷 PHOTOGRAPHY</div>
+                    <div class="bar-track"><div class="bar-fill hobby" style="width: 80%;"></div></div>
+                </div>
             </div>
-            <div class="bar-item">
-                <div class="bar-label">🔥 PYTORCH</div>
-                <div class="bar-track"><div class="bar-fill technical" style="width: 40%;"></div></div>
-            </div>
+
         </div>
 
-        <!-- Hobbies -->
-        <div class="bar-group">
-            <div class="bar-item">
-                <div class="bar-label">🏃 HIKING</div>
-                <div class="bar-track"><div class="bar-fill hobby" style="width: 70%;"></div></div>
-            </div>
-            <div class="bar-item">
-                <div class="bar-label">🐕 DOGS</div>
-                <div class="bar-track"><div class="bar-fill hobby" style="width: 98%;"></div></div>
-            </div>
-            <div class="bar-item">
-                <div class="bar-label">📷 PHOTOGRAPHY</div>
-                <div class="bar-track"><div class="bar-fill hobby" style="width: 80%;"></div></div>
-            </div>
-        </div>
-
-    </div>
 </div>
 
 
