@@ -15,7 +15,7 @@
     --accent:#67b7ff;
     --skill-color:#48b5b5;
     --hobby-color:#f5b025;
-    --toggle-bg: #ffffff; /* Tracks button color variations */
+    --toggle-bg: #1d4ed8; /* Blue circular button background matching screenshot */
 }
 
 /* Overriding theme values used directly by custom CSS variables */
@@ -25,7 +25,7 @@
     --text:#111111;
     --border:#d6d6d6;
     --separator:#000000;
-    --toggle-bg: #111111; /* Flips button color dynamics when dark active */
+    --toggle-bg: #1d4ed8; /* Keeps the icon button background uniformly blue */
 }
 
 *{
@@ -46,13 +46,13 @@ body{
     background:url("Background.png") center center/cover no-repeat;
 }
 
-/* Shrinks container border tight against the large 62px sun graphic layout frame */
+/* Tightened circle container padding safely down right against your sun icon dimensions */
 .toggle{
     position:fixed;
     top:20px;
     right:20px;
-    width:62px; 
-    height:62px;
+    width:48px;  
+    height:48px; 
     border:none;
     border-radius:50%;
     background:var(--toggle-bg); 
@@ -67,8 +67,8 @@ body{
 }
 
 .toggle img{
-    width:62px;
-    height:62px;
+    width:34px;
+    height:34px;
     object-fit:contain;
 }
 
@@ -95,8 +95,8 @@ body{
     height:200px;
     object-fit:cover;
     border-radius:50%;
-    border:6px solid var(--toggle-bg); 
-    background:var(--toggle-bg);
+    border:6px solid white; /* Keeps your crisp white outline framing steady */
+    background:white;
     margin-top:-110px;
     transition: .3s;
 }
@@ -385,7 +385,6 @@ body{
         </div>
         <div class="scholar">
             <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
-                <!-- Text removed from after icon block seamlessly -->
                 <img src="google_scholar_icon.png" alt="Google Scholar Icon">
             </a>
         </div>
@@ -448,3 +447,64 @@ body{
         <div class="languages-container">
             <div class="lang-item">
                 <div class="progress-circle">100%</div>
+                <div class="lang-label">English</div>
+            </div>
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">Kurdish</div>
+            </div>
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">Persian</div>
+            </div>
+            <div class="lang-item">
+                <div class="progress-circle half">50%</div>
+                <div class="lang-label">French</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-panel-right">
+        <h2>Skills &amp; Hobbies</h2>
+        <div class="skills-hobbies-container">
+            <div class="bar-group">
+                <div class="bar-item">
+                    <div class="bar-label">🐍 PYTHON</div>
+                    <div class="bar-track"><div class="bar-fill technical" style="width: 85%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">®️ MATLAB</div>
+                    <div class="bar-track"><div class="bar-fill technical" style="width: 95%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">🔥 PYTORCH</div>
+                    <div class="bar-track"><div class="bar-fill technical" style="width: 40%;"></div></div>
+                </div>
+            </div>
+
+            <div class="bar-group">
+                <div class="bar-item">
+                    <div class="bar-label">🏃 HIKING</div>
+                    <div class="bar-track"><div class="bar-fill hobby" style="width: 70%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">🐕 DOGS</div>
+                    <div class="bar-track"><div class="bar-fill hobby" style="width: 98%;"></div></div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">📷 PHOTOGRAPHY</div>
+                    <div class="bar-track"><div class="bar-fill hobby" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleTheme(){
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
