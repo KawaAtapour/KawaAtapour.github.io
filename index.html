@@ -12,6 +12,7 @@
     --text:#ffffff;
     --border:#334155;
     --separator:#ffffff;
+    --accent:#67b7ff; /* Clean light blue color for language rings */
 }
 
 .light{
@@ -55,7 +56,6 @@ body{
     justify-content:center;
 }
 
-/* 1. Enlarged sun icon to better fit the white circle container */
 .toggle img{
     width:46px;
     height:46px;
@@ -80,7 +80,6 @@ body{
     text-align:center;
 }
 
-/* 3. Shrunk profile size down to 200px and adjusted margin offset */
 .profile{
     width:200px;
     height:200px;
@@ -182,7 +181,7 @@ body{
 .publications{
     max-width:1500px;
     margin:auto;
-    padding:0 40px 80px;
+    padding:0 40px 40px;
 }
 
 .publication-grid{
@@ -204,166 +203,217 @@ body{
     line-height:1.6;
 }
 
+/* ==========================================================================
+   NEW WORKSPACE: LANGUAGES, SKILLS & HOBBIES GRID
+   ========================================================================== */
+.bottom-section {
+    max-width:1500px;
+    margin:auto;
+    padding:0 40px 80px;
+    display:grid;
+    grid-template-columns:1fr 1px 1fr;
+    gap:40px;
+}
+
+.bottom-section h2 {
+    text-align:center;
+    font-size:52px;
+    margin-top: 0;
+    margin-bottom:40px;
+}
+
+/* Languages Section Styling matching your reference image */
+.languages-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.lang-item {
+    text-align: center;
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 8px solid var(--accent); /* Outer continuous ring matching image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 0 4px var(--bg);
+}
+
+.lang-label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Skills & Hobbies List Content blocks */
+.skills-hobbies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.info-block h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #67b7ff;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-item {
+    background: rgba(103, 183, 255, 0.15);
+    border: 1px solid var(--accent);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
 @media(max-width:1100px){
-
-    .top-section{
+    .top-section, .publication-grid, .research-grid, .bottom-section{
         grid-template-columns:1fr;
     }
-
-    .publication-grid{
-        grid-template-columns:1fr;
-    }
-
-    .research-grid{
-        grid-template-columns:1fr;
-    }
-
     .separator{
         display:none;
     }
-
     .name{
         font-size:42px;
+    }
+    .bottom-section h2 {
+        font-size: 40px;
     }
 }
 </style>
 </head>
 <body>
 
-
 <button class="toggle" onclick="toggleTheme()">
     <img src="sun_icon.png" alt="Theme Toggle">
 </button>
 
-
 <div class="hero"></div>
 
-
 <div class="top-section">
-
     <div class="left-panel">
-
         <img src="Personal-Image.png" class="profile" alt="Profile">
-
         <div class="name">Kawa Atapour</div>
-
         <div class="position">PhD Student</div>
-
-
         <div class="university">
-            <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer">
-                Concordia University
-            </a>
+            <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer">Concordia University</a>
         </div>
-
-        
         <div class="scholar">
-            <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en"
-               target="_blank"
-               rel="noopener noreferrer">
-                <!-- 2. This structure is perfectly ready to load your asset -->
-                <img src="google_scholar_icon.png" alt="Google Scholar Icon">
+            <a href="https://scholar.google.ca/citations?user=8U-8CR0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="google_scholar_icon.png">
                 <span>Google Scholar</span>
             </a>
         </div>
-
-
-        
         <div class="bio">
             I am a Ph.D. student at Concordia University in CIISE department with research and industrial experience in Machine Learning, Deep Learning, Representation Learning, Large Language Models, Federated Learning, Reinforcement Learning, and Explainable AI. Experienced in developing AI solutions for multimodal sensor data analysis, intelligent monitoring systems, and trustworthy AI.
         </div>
-
-        <a href="CV.pdf" target="_blank" class="cv-button">
-            Download CV
-        </a>
-
+        <a href="CV.pdf" target="_blank" class="cv-button">Download CV</a>
     </div>
 
     <div class="separator"></div>
 
     <div class="right-panel">
-
         <h2>Research Interests</h2>
-
         <div class="research-grid">
-
             <div class="research-box">
                 <h3>Representation Learning</h3>
                 <p>Joint Embedding Predictive Architectures.</p>
             </div>
-
             <div class="research-box">
                 <h3>Foundation Models &amp; LLMs</h3>
                 <p>Large-scale models, reasoning and agentic AI.</p>
             </div>
-
             <div class="research-box">
                 <h3>Explainable AI</h3>
                 <p>Trustworthy and interpretable machine learning.</p>
             </div>
-
             <div class="research-box">
                 <h3>Reinforcement Learning</h3>
                 <p>Decision-making and autonomous intelligent systems.</p>
             </div>
-
         </div>
-
     </div>
-
 </div>
 
 <div class="publications">
-
-    <div class="publications-title">
-        My Publications
-    </div>
-
+    <div class="publications-title">My Publications</div>
     <div class="publication-grid">
-
         <div class="publication-column">
-
             <h2>Journal Papers</h2>
-
-            <div class="publication-item">
-                ECLIPSE: Embedding-Centered Foundation-Model Federated Knowledge Transfer for Data-Free Edge Intelligence (2026)
-            </div>
-
-            <div class="publication-item">
-                Intelligent Privacy-Preserving Demand Response for Green Data Centers (2023)
-            </div>
-
+            <div class="publication-item">ECLIPSE: Embedding-Centered Foundation-Model Federated Knowledge Transfer for Data-Free Edge Intelligence (2026)</div>
+            <div class="publication-item">Intelligent Privacy-Preserving Demand Response for Green Data Centers (2023)</div>
         </div>
-
         <div class="separator"></div>
-
         <div class="publication-column">
-
             <h2>Conference Papers</h2>
-
-            <div class="publication-item">
-                KNFu: Effective Knowledge Fusion (FUSION 2024)
-            </div>
-
-            <div class="publication-item">
-                Multi-Model Federated Learning Optimization Based on Multi-Agent Reinforcement Learning (CAMSAP 2023)
-            </div>
-
-            <div class="publication-item">
-                CoCo-POI: Collaborative Contrastive Learning for Point-of-Interest Recommendation (ICHMS 2025)
-            </div>
-
+            <div class="publication-item">KNFu: Effective Knowledge Fusion (FUSION 2024)</div>
+            <div class="publication-item">Multi-Model Federated Learning Optimization Based on Multi-Agent Reinforcement Learning (CAMSAP 2023)</div>
+            <div class="publication-item">CoCo-POI: Collaborative Contrastive Learning for Point-of-Interest Recommendation (ICHMS 2025)</div>
         </div>
-
     </div>
-
 </div>
 
-<script>
-function toggleTheme(){
-    document.body.classList.toggle("light");
-}
-</script>
+<!-- NEW LAYOUT SECTION -->
+<div class="bottom-section">
+    <!-- Left Panel: Languages with progress circles -->
+    <div class="bottom-panel-left">
+        <h2>Languages</h2>
+        <div class="languages-container">
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">English</div>
+            </div>
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">Kurdish</div>
+            </div>
+            <div class="lang-item">
+                <div class="progress-circle">100%</div>
+                <div class="lang-label">Persian</div>
+            </div>
+        </div>
+    </div>
 
-</body>
-</html>
+    <div class="separator"></div>
+
+    <!-- Right Panel: Skills & Hobbies Content Boxes -->
+    <div class="bottom-panel-right">
+        <h2>Skills &amp; Hobbies</h2>
+        <div class="skills-hobbies-container">
+            <div class="info-block">
+                <h3>Technical Skills</h3>
+                <div class="tag-container">
+                    <span class="tag-item">Python</span>
+                    <span class="tag-item">PyTorch</span>
+                    <span class="tag-item">TensorFlow</span>
+                    <span class="tag-item">Git</span>
+                    <span class="tag-item">Linux</span>
+                </div>
+            </div>
+            <div class="info-block">
+                <h3>Hobbies &amp; Interests</h3>
+                <div class="tag-container">
