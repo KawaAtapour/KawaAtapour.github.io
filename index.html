@@ -45,13 +45,26 @@ body{
     height:340px;
     background:url("Background.png") center center/cover no-repeat;
 }
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 44px;        /* Match the sun image size perfectly */
+    height: 44px;       /* Match the sun image size perfectly */
+    border: none;
+    background: none;   /* Removes the blue circle background completely */
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: none;   /* Removes the outer shadow ring */
+}
 
-
-
-/* Enlarges the sun graphic to take up almost the entire blue circle */
 .toggle img {
-    width: 44px;  /* Increased from 34px to make it visibly larger */
-    height: 44px; /* Increased from 34px to make it visibly larger */
+    width: 44px;        /* The sun asset displays bare on your background */
+    height: 44px;
     object-fit: contain;
 }
 
